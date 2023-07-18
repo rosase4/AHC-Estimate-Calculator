@@ -12,3 +12,22 @@ while run:
     price_list[item_name] = item_cost
     
 print(price_list)
+
+decision = print('Do you want to calculate square footage? Yes or No')
+if decision == 'Yes':        
+    lenght = float(input("Enter lenght or 0")) 
+    width = float(input("Enter width or 0")) 
+    
+    sq_ft = float(lenght * width)
+    print('Square footage is:', f'{sq_ft:.2f}')
+    
+    for keys, value in price_list.items(): 
+        price = sq_ft * value
+        lst = []
+        lst.append(price)
+    total_price = f'{sum(lst):.2f}'
+    print("Total price is:", total_price)
+
+decision_2 = print('Do you want to calculate cubic feet? Yes or No')
+if decision_2 == 'Yes':
+    
