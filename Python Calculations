@@ -1,0 +1,14 @@
+print("Welcome to Estimate Calculator")
+print("Begin by adding the cost of your items")
+print("To stop, enter '/stop'")
+
+price_list = {}
+run = True
+while run:
+    item_name = str(input("Enter unit name:"))
+    if item_name == 'stop' or item_name == 'Stop':
+      break
+    item_cost = float(input("Enter unit price:"))
+    price_list[item_name] = item_cost
+    
+print(price_list)
