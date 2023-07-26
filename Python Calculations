@@ -1,6 +1,6 @@
-print("Welcome to Estimate Calculator")
+print("Welcome Bertin, let's calculate that estimate.")
 print("Begin by adding the cost of your items")
-print("To stop, enter '/stop'")
+print("To stop, enter 'Stop'")
 
 price_list = {}
 run = True
@@ -13,21 +13,45 @@ while run:
     
 print(price_list)
 
-decision = print('Do you want to calculate square footage? Yes or No')
-if decision == 'Yes':        
-    lenght = float(input("Enter lenght or 0")) 
-    width = float(input("Enter width or 0")) 
-    
-    sq_ft = float(lenght * width)
-    print('Square footage is:', f'{sq_ft:.2f}')
-    
-    for keys, value in price_list.items(): 
-        price = sq_ft * value
-        lst = []
-        lst.append(price)
-    total_price = f'{sum(lst):.2f}'
-    print("Total price is:", total_price)
+while run:
+    decision = input("Do you want to calculate square footage? 'Yes' or 'No'")
+    if decision == 'Yes' or decision == 'yes':        
+        lenght = float(input("Enter lenght or 0")) 
+        width = float(input("Enter width or 0")) 
+        
+        sq_ft = float(lenght * width)
+        print('Square footage is:', f'{sq_ft:.2f}')
+        
+        for keys, value in price_list.items(): 
+            price = sq_ft * value
+            lst = []
+            lst.append(price)
+        total_price = f'{sum(lst):.2f}'
+        print("Total price is:", total_price)
+        break
+    elif decision == 'No' or decision == 'no' or decision == 'NO':
+        break
+    else:
+        print("Enter 'Yes' or 'No'")
 
-decision_2 = print('Do you want to calculate cubic feet? Yes or No')
-if decision_2 == 'Yes':
-    
+while run:
+    decision_2 = input("Do you want to calculate cubic feet? 'Yes' or 'No'")
+    if decision_2 == 'Yes' or decision == 'yes':
+        lenght_2 = float(input("Enter lenght or 0")) 
+        width_2 = float(input("Enter width or 0")) 
+        height_2 = float(input("Enter height or 0"))
+        
+        cubic_ft = float(lenght_2 * width_2 * height_2)
+        print('Cubic feet is:', f'{cubic_ft:.2f}')
+        
+        for keys, value in price_list.items(): 
+            price = cubic_ft * value
+            lst_2 = []
+            lst_2.append(price)
+        total_p = f'{sum(lst_2):.2f}'
+        print("Total price is:", total_p)
+        break
+    elif decison_2 == 'No' or decision == 'no'or decision =='NO':
+        break
+    else:
+        print("Enter 'Yes' or 'No'")
